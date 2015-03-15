@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self globalQueue];
+    //[self addGcd];
+    //[self myQueue];
+    //[self globalQueue];
+    [self lock];
 }
 
 - (void)addGcd {
@@ -95,4 +98,27 @@
     });
 }
 
+- (void)lock {
+    __block int a = 0;
+    dispatch_queue_t myqueue1 = dispatch_queue_create("myqueue1", NULL);
+    dispatch_queue_t myqueue2 = dispatch_queue_create("myqueue2", NULL);
+    
+    dispatch_async(myqueue1, ^{
+        @synchronized(self) {
+            for (int i = 0; i < 10; i++) {
+                a++;
+                NSLog(@"%d",a);
+            }
+        }
+    });
+    
+    dispatch_async(myqueue2, ^{
+        @synchronized(self) {
+            for (int i = 0; i < 10; i++) {
+                a--;
+                NSLog(@"%d",a);
+            }
+        }
+    });
+}
 @end
