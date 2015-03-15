@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ConcurrentProcessor.h"
 
 @interface ViewController ()
 
@@ -19,7 +20,8 @@
     //[self addGcd];
     //[self myQueue];
     //[self globalQueue];
-    [self lock];
+    //[self lock];
+    [self currentProcessor];
 }
 
 - (void)addGcd {
@@ -120,5 +122,17 @@
             }
         }
     });
+}
+
+- (void)currentProcessor {
+    ConcurrentProcessor *processor = [[ConcurrentProcessor alloc] init];
+    
+    [processor performSelectorInBackground:@selector(computeTask:) withObject:@5];
+    [processor performSelectorInBackground:@selector(computeTask:) withObject:@10];
+    [processor performSelectorInBackground:@selector(computeTask:) withObject:@15];
+    
+    while (!processor.isFinished) {
+        NSLog(@"%d",processor.computeResult);
+    }
 }
 @end

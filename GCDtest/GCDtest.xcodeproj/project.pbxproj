@@ -14,6 +14,7 @@
 		57CE90421AB2ADD70036F4BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CE90411AB2ADD70036F4BE /* Images.xcassets */; };
 		57CE90451AB2ADD70036F4BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CE90431AB2ADD70036F4BE /* LaunchScreen.xib */; };
 		57CE90511AB2ADD70036F4BE /* GCDtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CE90501AB2ADD70036F4BE /* GCDtestTests.m */; };
+		57CE905C1AB58B900036F4BE /* ConcurrentProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CE905B1AB58B900036F4BE /* ConcurrentProcessor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		57CE904A1AB2ADD70036F4BE /* GCDtestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDtestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CE904F1AB2ADD70036F4BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57CE90501AB2ADD70036F4BE /* GCDtestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDtestTests.m; sourceTree = "<group>"; };
+		57CE905A1AB58B900036F4BE /* ConcurrentProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConcurrentProcessor.h; sourceTree = "<group>"; };
+		57CE905B1AB58B900036F4BE /* ConcurrentProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConcurrentProcessor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				57CE90391AB2ADD70036F4BE /* AppDelegate.m */,
 				57CE903B1AB2ADD70036F4BE /* ViewController.h */,
 				57CE903C1AB2ADD70036F4BE /* ViewController.m */,
+				57CE905A1AB58B900036F4BE /* ConcurrentProcessor.h */,
+				57CE905B1AB58B900036F4BE /* ConcurrentProcessor.m */,
 				57CE903E1AB2ADD70036F4BE /* Main.storyboard */,
 				57CE90411AB2ADD70036F4BE /* Images.xcassets */,
 				57CE90431AB2ADD70036F4BE /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				57CE903D1AB2ADD70036F4BE /* ViewController.m in Sources */,
 				57CE903A1AB2ADD70036F4BE /* AppDelegate.m in Sources */,
 				57CE90371AB2ADD70036F4BE /* main.m in Sources */,
+				57CE905C1AB58B900036F4BE /* ConcurrentProcessor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				57CE90561AB2ADD70036F4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57CE90571AB2ADD70036F4BE /* Build configuration list for PBXNativeTarget "GCDtestTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				57CE90591AB2ADD70036F4BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
